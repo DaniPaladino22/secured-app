@@ -76,7 +76,7 @@ passport.serializeUser(function(user, done) {
    router.post('/authorization-code/callback', passport.authenticate('azuread-openidconnect', 
    { failureRedirect: '/' }),(req,res)=>{
     console.log('We received a return from AzureAD.');
-    console.log('******user Post: '+req.user._json.preferred_username);
+    
     res.redirect('/user');
   });
   
@@ -121,7 +121,10 @@ const getConfiguredPassport = async () => {
             }
             if (!user) {
               // "Auto-registration"
-              users.push(profile);
+              users.push(profile,accessToken);
+              
+              profile.accessToken=accessToken;
+           
               return done(null, profile,accessToken, refreshToken);
             }
             return done(null, user,accessToken, refreshToken);

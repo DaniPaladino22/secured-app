@@ -12,7 +12,7 @@ exports.creds = {
 
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
   // If app key contains '\', replace it with '\\'.
-  clientSecret: 'GC28Q~45neiOXMfFYHDsoah2DgzUYRAiQB1tXbFi', 
+  clientSecret: 'OU68Q~7Oqw3iqm2teEDUNz42sLZoHM17HBzDvbff', 
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   // If you want to get access_token, you must use 'code', 'code id_token' or 'id_token code' 

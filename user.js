@@ -3,20 +3,13 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const handleUserProfile = (req, res) => {
-    console.log('*****user_profile: '+req.user._json.preferred_username);
-    console.log('*****user_profile: '+JSON.stringify(req.user));
-
+    
     const identifier = req.user._json.preferred_username;
     const accessToken = req.user.accessToken;
     const name = req.user._json.name;
-
-    console.log('*****identifier: '+ identifier);
-    console.log('*****accessToken: '+ accessToken);
-    console.log('*****name: '+ name);
-
     
     const authToken= jwt.sign({identifier, accessToken},
-        "yourSecretKey",
+        "4f6c007e337ad871a3c735a84206721f",
         { expiresIn: "30d" });
     
     res.render('user', {
