@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Express OIDC Demo</title>
-</head>
-
-<body>
-    <h1>Welcome</h1>
-        <p>Let's <a href="/login">Login with Curity</a></p>
-    </body>
-</html>
+<% if (!user) { %>
+	<h2>Welcome! Please log in.</h2>
+	<a href="/login">Log In</a>
+<% } else { %>
+	<h2>Hello, <%= user.displayName %></h2>
+	<a href="/account">Account Info</a></br>
+	<a href="/logout">Log Out</a>
+<% } %>

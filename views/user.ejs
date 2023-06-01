@@ -8,12 +8,13 @@
 <body>
     <h1>Welcome</h1>
         <p>
-            Hello <%= username %>! Welcome to the express demo. You logged in with Curity and authorized the
-            <%= client %> to access your resources. <%= token %>
+            Hello <%= username %>! Welcome to the express demo. You logged in and authorized the
+           to access your resources. 
+            
         </p>
         <p>&nbsp;</p>
         <p>           
-            If you want to go "WorkAdventure", please <a href="http://play.workadventure.localhost?token=<%= token %>"> click here </a>.
+            If you want to go "WorkAdventure", please <a href="http://play.workadventure.localhost?token=<%=token%>"> click here </a>.
         </p>
     </body>
 </html>
